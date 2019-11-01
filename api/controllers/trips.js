@@ -34,6 +34,18 @@ router.get('/userId/:id', (req, res) => {
     });
 });
 
+router.post('/userId/:id', (req, res) => {
+  const { id } = req.params;
+  Trip.findAll({where: {UserId: id}})
+  .then(post => {
+    if(!post) {
+      return res.sendStatus(404);
+    }
+
+    res.json(post);
+  });
+});
+
 
 router.get('/:id', (req, res) => {
   const { id } = req.params;
