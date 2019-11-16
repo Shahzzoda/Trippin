@@ -11,13 +11,15 @@ import PostFormPage from './pages/PostFormPage';
 import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
 
+
 import './App.css';
 
 
 function Navigation(props) {
   return (
+    /*
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
-      <Link className="navbar-brand" to="/">Micro Blog</Link>
+      <Link className="navbar-brand" to="/">Trippin</Link>
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
           <NavLink className="nav-link" exact to="/posts/new">
@@ -30,7 +32,31 @@ function Navigation(props) {
           </NavLink>
         </li>
       </ul>
-    </nav>
+    </nav> 
+*/
+
+      <nav className="navbar">
+        <span className="navbar-toggle" id="js-navbar-toggle">
+          <i className="fas fa-bars" />
+        </span>
+        <a href="#" className="logo">Trippin</a>
+        <ul className="main-nav" id="js-menu">
+          <li>
+            <a href="/" className="nav-links">Home</a>
+          </li>
+          <li>
+            <a href="/posts/new" className="nav-links">Blog</a>
+          </li>
+          <li>
+            <a href="/" className="nav-links">Login</a>
+          </li>
+          <li>
+            <a href="/about-us" className="nav-links">About Us</a>
+          </li>
+        </ul>
+      </nav>
+
+
   );
 }
 
