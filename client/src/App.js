@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {  
   BrowserRouter as Router, 
   Switch, 
   Route, 
@@ -16,21 +16,56 @@ import './App.css';
 
 function Navigation(props) {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
-      <Link className="navbar-brand" to="/">Trippin</Link>
-      <ul className="navbar-nav mr-auto">
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/posts/new">
-            New Post
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/about-us">
-            Settings
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <div class="container-fluid navbar">
+      <nav class="navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Trippin <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item nav-links">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item nav-links">
+            <a class="nav-link" href="/posts/new">Blog</a>
+          </li>
+          <li class="nav-item nav-links">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item nav-links">
+            <a class="nav-link" href="/about-us">About Us</a>
+          </li>
+        </ul>
+      </div>
+        </nav>
+      </div>
+
+          /*
+    <nav className="navbar">
+        <span className="navbar-toggle" id="js-navbar-toggle">
+          <i className="fas fa-bars" />
+        </span>
+        <a href="#" className="logo">Trippin</a>
+        <ul className="main-nav" id="js-menu">
+          <li>
+            <a href="/" className="nav-links">Home</a>
+          </li>
+          <li>
+            <a href="/posts/new" className="nav-links">Blog</a>
+          </li>
+          <li>
+            <a href="/" className="nav-links">Login</a>
+          </li>
+          <li>
+            <a href="/about-us" className="nav-links">About Us</a>
+          </li>
+        </ul>
+      </nav> */ 
+
+
   );
 }
 
