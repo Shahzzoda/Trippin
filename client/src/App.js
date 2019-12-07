@@ -90,7 +90,8 @@ class App extends React.Component {
   }
 }
 
-
+const container = document.createElement("div");
+document.body.appendChild(container);
 export default App;
 
 

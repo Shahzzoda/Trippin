@@ -2,7 +2,7 @@ import React from 'react';
 import Loading from '../components/Loading';
 import sally from '../assets/images/sally.png';
 import ImageCard from '../components/ImageCard.js';
-
+import ModalCard from '../components/ModalCard.js';
 function User(props) {
   return(
     <div className="user-card card">
@@ -13,7 +13,7 @@ function User(props) {
       </div>
       <div className="col-8">
         <h2>{ props.username }</h2>
-        <p>{ props.bio}</p></div>
+        <p>{ props.bio }</p></div>
       </div>
     </div>
   </div>
@@ -27,6 +27,7 @@ class PostsListPage extends React.Component {
       posts: [],
       loading: true,
       user: undefined,
+      show: false
     }
     this.callUser()
   }
@@ -46,24 +47,47 @@ class PostsListPage extends React.Component {
       .then(posts => {
         this.setState({
           loading: false,
-          posts: posts.map((p,ii) => <ImageCard {...p} key={ii} src={p.coverphoto}/>),
+          posts: posts.map((p,ii) => 
+            <ImageCard {...p} key={ii} src={p.coverphoto} onClick={this.showModal}/>),
         });
       })
       .catch(err => console.log("API ERROR: ", err));
   }
 
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
   render() {
     if(this.state.loading) {
       return <Loading />;
     }
-
     return (
       <div className="container text-center">
         <User username={this.state.user.username} bio={this.state.user.bio}/>
         <div className="row">
-        { this.state.posts }
+        { this.state.posts}
         </div>
-      </div>
+        <ModalCard show={this.state.show} handleClose={this.hideModal}>
+            <div className="h-50">
+              <img src={sally} className="image-fluid w-100"></img>
+            </div>
+              <div className="row">
+                <div className="col-4">
+                  <img className="img-thumbnail img-responsive" src={sally} alt="sally's icon"/>
+                </div>
+                <div className="col-4">
+                  <img className="img-thumbnail img-responsive" src={sally} alt="sally's icon"/>
+                </div>
+                <div className="col-4">
+                  <img className="img-thumbnail img-responsive" src={sally} alt="sally's icon"/>
+                </div>
+              </div>
+        </ModalCard>
+        </div>
     );
   }
 }

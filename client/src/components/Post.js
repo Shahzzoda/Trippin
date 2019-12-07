@@ -12,6 +12,7 @@ function Post({ content, createdAt, id }) {
           { createdAt }
         </div>
       </div>
+
     </div>
   );
 }
