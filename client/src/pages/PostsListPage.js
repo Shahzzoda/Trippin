@@ -72,9 +72,8 @@ class PostsListPage extends React.Component {
         { this.state.posts}
         </div>
         <ModalCard show={this.state.show} handleClose={this.hideModal}>
-            <div className="h-50">
+        
               <img src={sally} className="image-fluid w-100"></img>
-            </div>
               <div className="row">
                 <div className="col-4">
                   <img className="img-thumbnail img-responsive" src={sally} alt="sally's icon"/>
