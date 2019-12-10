@@ -69,7 +69,7 @@ class MapPage extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='col-12'>
         <h1>You've been around.</h1>
         <Map posts = { this.state.posts }/>
         { this.state.posts }
