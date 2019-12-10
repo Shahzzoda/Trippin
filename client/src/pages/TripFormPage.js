@@ -122,6 +122,7 @@ class TripFormPage extends React.Component {
       cropping: true,
       showSkipCropButton: false,
       croppingAspectRatio: 1.0,
+      croppingCoordinatesMode: 'custom',
       }, (error, result) => { 
         if (!error && result && result.event === 'success') { 
           console.log('Done! Here is the image info: ', result); 

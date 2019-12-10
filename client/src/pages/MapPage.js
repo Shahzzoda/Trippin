@@ -10,7 +10,7 @@ class Map extends React.Component {
       lat: 59.95,
       lng: 30.33
     },
-    zoom: 11
+    zoom: 1
   };
 
   render() {
@@ -69,7 +69,7 @@ class MapPage extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='col-12'>
         <h1>You've been around.</h1>
         <Map posts = { this.state.posts }/>
         { this.state.posts }
