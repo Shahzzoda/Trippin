@@ -47,7 +47,7 @@ class PostsListPage extends React.Component {
       .then(posts => {
         this.setState({
           loading: false,
-          posts: posts.map((p,ii) => <ImageCard {...p} key={ii} src={p.coverphoto}/>),
+          posts: posts.map((p,ii) => <ImageCard {...p} key={ii} src={p.coverphoto} tripname={p.name}/>),
         });
       })
       .catch(err => console.log("API ERROR: ", err));

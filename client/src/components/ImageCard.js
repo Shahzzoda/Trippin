@@ -35,7 +35,7 @@ class ImageCard extends React.Component {
           >
           <Modal.Header closeButton>
             <Modal.Title id="example-modal-sizes-title-lg">
-              Large Modal
+              {this.props.tripname}
             {this.props.id}
             </Modal.Title>
           </Modal.Header>
