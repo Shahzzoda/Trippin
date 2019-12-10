@@ -1,7 +1,7 @@
 import React from 'react';
 import Loading from '../components/Loading';
 import sally from '../assets/images/sally.png';
-import ImageCard from '../components/ImageCard.js';
+import ImageCard from '../components/ImageCard';
 
 function User(props) {
   return(
@@ -47,7 +47,7 @@ class PostsListPage extends React.Component {
       .then(posts => {
         this.setState({
           loading: false,
-          posts: posts.map((p,ii) => <ImageCard {...p} key={ii} src={p.coverphoto}/>),
+          posts: posts.map((p,ii) => <ImageCard {...p} key={ii} src={p.coverphoto} tripname={p.name}/>),
         });
       })
       .catch(err => console.log("API ERROR: ", err));
@@ -61,6 +61,7 @@ class PostsListPage extends React.Component {
     return (
       <div className="container text-center">
         <User username={this.state.user.username} bio={this.state.user.bio}/>
+        {this.state.modals}
         <div className="row">
         { this.state.posts }
         </div>
@@ -68,5 +69,6 @@ class PostsListPage extends React.Component {
     );
   }
 }
+
 
 export default PostsListPage;
