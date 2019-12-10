@@ -2,8 +2,6 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import ImageCard from '../components/ImageCard.js';
 
-const AnyReactComponent = ({ icon }) => <div> <img style={{ width: '5em', height: '5em', border:'1px solid white' }} src={icon} /> </div>
-
 class Map extends React.Component {
   static defaultProps = {
     center: {
@@ -14,20 +12,22 @@ class Map extends React.Component {
   };
 
   render() {
-    let markers = this.props.posts.map((obj) => <AnyReactComponent
+    let markers = this.props.posts.map((obj) =>  <ImageCard 
         lat={obj.props.coverlat}
         lng={obj.props.coverlng}
-        icon={obj.props.coverphoto}
+        src={obj.props.coverphoto}
+        style={{ width: '5em', height: '5em' }}
+        id={obj.props.id}
+        tripname={obj.props.name}
       />)
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '50vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: 'api key here' }}
+          bootstrapURLKeys={{ key: 'API key here' }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-        {console.log("markers", markers)}
         {markers}
         </GoogleMapReact>
       </div>
