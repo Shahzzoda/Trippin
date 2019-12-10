@@ -8,6 +8,7 @@ class ImageCard extends React.Component {
     this.state = {
       lgShow: false,
       medias: null,
+      coverphoto: null,
     }
   }
 
@@ -19,24 +20,24 @@ class ImageCard extends React.Component {
         this.setState({
           medias: medias.map((p,ii) => <ModalMedia {...p} key={ii} src={p.photo} name={p.name} desc={p.description} />),
         });
+        this.setState({coverphoto: medias[0].photo})
       })
       .catch(err => console.log("API ERROR: ", err));
   }
 
   render() {
+    
     return (
       <div className="col-4">
-          <img className="img-thumbnail img-responsive" src={this.props.src} alt="sally's icon" onClick={() => this.setState({ lgShow: true })} />
+          <img className="img-thumbnail img-responsive" style={this.props.style} src={this.props.src} alt="sally's icon" onClick={() => this.setState({ lgShow: true })} />
           <Modal
             size="lg"
             show={this.state.lgShow}
             onHide={() => this.setState({ lgShow: false })}
-            aria-labelledby="example-modal-sizes-title-lg"
           >
           <Modal.Header closeButton>
             <Modal.Title id="example-modal-sizes-title-lg">
               {this.props.tripname}
-            {this.props.id}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
