@@ -10,7 +10,7 @@ class Map extends React.Component {
       lat: 59.95,
       lng: 30.33
     },
-    zoom: 11
+    zoom: 1
   };
 
   render() {
