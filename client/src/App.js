@@ -32,7 +32,7 @@ function Navigation(props) {
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" exact to="/about-us">
-            Settings
+            About Us
           </NavLink>
         </li>
       </ul>
