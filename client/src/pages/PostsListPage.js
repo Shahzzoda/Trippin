@@ -2,6 +2,7 @@ import React from 'react';
 import Loading from '../components/Loading';
 import sally from '../assets/images/sally.png';
 import ImageCard from '../components/ImageCard';
+import Confetti from 'react-confetti';
 
 function User(props) {
   return(
@@ -30,7 +31,7 @@ class PostsListPage extends React.Component {
     }
     this.callUser()
   }
-
+  
   callUser(){
     fetch("/api/users/")
     .then(res => res.json())
@@ -60,8 +61,9 @@ class PostsListPage extends React.Component {
 
     return (
       <div className="container text-center">
+        { this.props.location.state && this.props.location.state.confetti ? <Confetti recycle={false} gravity={0.5} numberOfPiece={400} /> : console.log("no confetti") }
         <User username={this.state.user.username} bio={this.state.user.bio}/>
-        {this.state.modals}
+        { this.state.modals }
         <div className="row">
         { this.state.posts }
         </div>

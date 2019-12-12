@@ -40,9 +40,9 @@ module.exports = (sequelize, DataTypes) => {
         sequelize,
         modelName: 'user'
     });
-    Media.associate = (models) => {
+    User.associate = (models) => {
        // This adds TripID to Media 
-       models.Media.belongsTo(models.Trip);
+       models.User.hasMany(models.Trip);
     };
 
     return User;

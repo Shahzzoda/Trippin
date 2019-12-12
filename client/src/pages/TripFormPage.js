@@ -142,7 +142,10 @@ class TripFormPage extends React.Component {
       }
     )
     
-    if(this.state.success) return <Redirect to='/' />;
+    if(this.state.success) return <Redirect to={{
+      pathname: '/',
+      state: { confetti: true }
+    }} />;
 
     let errorMessage = null;
     if(this.state.error) {
