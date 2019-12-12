@@ -22,9 +22,9 @@ class Map extends React.Component {
       />)
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '50vh', width: '100%' }}>
+      <div className='map-card' style={{ height: '50vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: 'API key here' }}
+          bootstrapURLKeys={{ key: 'API_KEY_HERE' }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >

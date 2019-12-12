@@ -28,7 +28,25 @@
 
 /* Trip Form Styling */
 #tripFormPage input {
-  margin-bottom: 15px;
+  padding: 25px;
+}
+
+#tripFormPage .post-button {
+  background: #c16ecf;
+  border-color: #c16ecf;
+}
+
+#tripFormPage .cloudinary-button {
+  margin-right: 10px;
+}
+
+.post-button:not(:disabled):not(.disabled):active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(88, 0, 255, 0.34);
+}
+
+.post-button, .cloudinary-button {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /*!
