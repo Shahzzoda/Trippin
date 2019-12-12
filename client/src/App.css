@@ -357,3 +357,15 @@ td.rdtYear:hover {
   color:white;
 
 }
+
+/* user component */
+.fas {
+  margin: 0 10px;
+  color: #e680d4;
+  font-size: 20px;
+}
+
+.username {
+  font-size: 23px;
+  color: grey;
+}
