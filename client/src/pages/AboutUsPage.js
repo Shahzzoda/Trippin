@@ -2,7 +2,10 @@ import React from 'react';
 
 function AboutUsPage(props) {
   return (
-    <div>A little info about us.</div>
+    <div>
+      <h1>A little info about us.</h1>
+      <p>Coming soon.</p>
+    </div>
   );
 }
 
