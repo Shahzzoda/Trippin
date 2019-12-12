@@ -17,7 +17,10 @@ const { Trip, Media } = db;
 
 router.get('/:id', (req,res) => {
   const { id } = req.params;
-  Trip.findAll({where: {userId: id}})
+  Trip.findAll({
+    where: {userId: id},
+    include: [{model: Media}],
+  })
   .then(trip => res.json(trip))
   .catch(e => res.json(e));
 });
