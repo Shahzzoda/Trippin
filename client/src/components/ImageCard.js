@@ -28,7 +28,7 @@ class ImageCard extends React.Component {
   render() {
     
     return (
-      <div className="col-4">
+      <div className="col-4 image-card">
           <img className="img-thumbnail img-responsive" style={this.props.style} src={this.props.src} alt="sally's icon" onClick={() => this.setState({ lgShow: true })} />
           <Modal
             size="lg"

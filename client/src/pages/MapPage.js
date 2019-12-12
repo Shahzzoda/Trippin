@@ -72,7 +72,11 @@ class MapPage extends React.Component {
       <div className='col-12'>
         <h1>You've been around.</h1>
         <Map posts = { this.state.posts }/>
-        { this.state.posts }
+        <div className='container'>
+          <div className="row">
+            { this.state.posts }
+          </div>
+        </div>
       </div>
     )
   }
