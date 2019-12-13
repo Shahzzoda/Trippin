@@ -142,7 +142,10 @@ class TripFormPage extends React.Component {
       }
     )
     
-    if(this.state.success) return <Redirect to='/' />;
+    if(this.state.success) return <Redirect to={{
+      pathname: '/',
+      state: { confetti: true }
+    }} />;
 
     let errorMessage = null;
     if(this.state.error) {
@@ -170,7 +173,7 @@ class TripFormPage extends React.Component {
             onChange={this.descChanged}
           />
           <button className='btn cloudinary-button' onClick={() => myWidget.open()}>Upload</button>
-          <button className='btn btn-primary' onClick={this.savePost}>Post</button>
+          <button className='btn btn-primary post-button' onClick={this.savePost}>Post</button>
           <div className='form-list col-12' >
             {this.state.pics}
             {/* <PhotoEdit src="https://res.cloudinary.com/ctptrippin/image/upload/v1574558507/tbmleanfctsozvpvj1ze.png"  onLocationChange={(e) => this.locationChange(e, 0) }/>
