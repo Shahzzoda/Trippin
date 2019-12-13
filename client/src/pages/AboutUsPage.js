@@ -4,7 +4,6 @@ import "./carousel.css";
 function AboutUsPage() {
   return (
     <div>
-<<<<<<< HEAD
     <div class="position-relative overflow-hidden mt-md-3 mb-md-3 text-center">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <h1 class="display-4 font-weight-normal">We are Trippin!</h1>
@@ -75,10 +74,6 @@ function AboutUsPage() {
           </div>
         </div>
       </div>
-=======
-      <h1>A little info about us.</h1>
-      <p>Coming soon.</p>
->>>>>>> 3bc033390884b932f3b1dcc2bd10e3501ca81841
     </div>
   );
 }
