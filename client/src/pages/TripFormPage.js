@@ -18,7 +18,7 @@ function PhotoEdit(props){
     </div>
 
     <div class="col-8">
-      <input type='text' placeholder='Add a Description' className='form-control mr-3 rounded' onChange={props.onDescChange} />
+      <textarea type='text' placeholder='Add a Description' className='form-control mr-3 rounded' onChange={props.onDescChange} />
       <Datetime inputProps={{ placeholder: 'Select a Date'}} onChange={props.onTimeChange} />
       <Geosuggest placeholder="Select Location" onSuggestSelect={props.onLocationChange} />
     </div>
@@ -55,28 +55,41 @@ class TripFormPage extends React.Component {
     })
   }
   timeChanged = (event, counter) => {
-    let utcTime = event.utc().format();
-    let media = this.state.medias;
-    media[parseInt(counter)].timedate=utcTime;
-    this.setState({medias: media});
+    try {
+      let utcTime = event.utc().format();
+      let media = this.state.medias;
+      media[parseInt(counter)].timedate=utcTime;
+      this.setState({medias: media});
+    } catch {
+      console.log("Exception caught in time change handler")
+    }
   }
 
   photoCaptionChange = (event, counter) => {
-    let desc = event.target.value;
-    let media = this.state.medias;
-    media[parseInt(counter)].desc=desc;
-    this.setState({medias: media});
+    try {
+      let desc = event.target.value;
+      let media = this.state.medias;
+      media[parseInt(counter)].desc=desc;
+      this.setState({medias: media});
+    } catch {
+      console.log("Exception caught in photo change handler ")
+    }
   }
 
   locationChange = (s, counter) => {
-    let lng = s.location.lng;
-    let lat = s.location.lat;
-    let media = this.state.medias;
-    media[parseInt(counter)].location={lat: lat, lng: lng};
-    this.setState({medias: media});
+    try{
+      let lng = s.location.lng;
+      let lat = s.location.lat;
+      let media = this.state.medias;
+      media[parseInt(counter)].location={lat: lat, lng: lng};
+      this.setState({medias: media});
+    } catch {
+      console.log("Exception caught in location change handler")
+    }
   }
 
   savePost = (event) => {
+    try {
     console.log('state to be saved:', this.state)
     fetch('/api/trips/', {
       method: 'POST',
@@ -112,6 +125,9 @@ class TripFormPage extends React.Component {
           error: true,
         });
       });
+    } catch {
+      alert("There was an error trying to save your post. Please make sure you have entered all required fields")
+    }
   }
 
   render() {
@@ -162,14 +178,14 @@ class TripFormPage extends React.Component {
             type='text' 
             placeholder='Name of the trip' 
             value={this.state.name}
-            className='form-control mr-3 rounded'
+            className='form-control mr-3 rounded name'
             onChange={this.nameChanged}
           />
           <input 
             type='text' 
             placeholder='Description here' 
             value={this.state.desc}
-            className='form-control mr-3 rounded'
+            className='form-control mr-3 rounded description'
             onChange={this.descChanged}
           />
           <button className='btn cloudinary-button' onClick={() => myWidget.open()}>Upload</button>

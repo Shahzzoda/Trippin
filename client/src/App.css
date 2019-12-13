@@ -22,13 +22,15 @@
 }
 */
 
-.btn-secondary {
-  margin-right: 15px;
-}
 
 /* Trip Form Styling */
-#tripFormPage input {
+#tripFormPage .name,
+#tripFormPage .description {
   padding: 25px;
+}
+
+#tripFormPage textarea {
+  margin-bottom: 5px;
 }
 
 #tripFormPage .post-button {
@@ -47,6 +49,10 @@
 .post-button, .cloudinary-button {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.btn-secondary {
+  margin-right: 15px;
 }
 
 /*!
