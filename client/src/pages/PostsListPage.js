@@ -15,9 +15,11 @@ function User(props) {
       <div className="col-8">
         <h2>{ props.username } <span className="username">(@sunnysally)</span></h2>
         <p>{ props.bio}</p>
-        <p><i class="fas fa-compass"></i>Scily, Italy
-        <i class="fas fa-camera"></i>{props.num_pics} Pictures
-        <i class="fas fa-award"></i>{props.num_places} Trips</p>
+        <p>
+          <i class="fas fa-compass"></i>Sicily, Italy
+          <i class="fas fa-camera"></i>{props.num_pics} Pictures
+          <i class="fas fa-award"></i>{props.num_places} Trips
+        </p>
       </div>
       </div>
     </div>
