@@ -18,7 +18,7 @@ Post your photos with all the neccessary metadata. Upload functionality uses Clo
 3. Tag a location so it can be captured on the map!
 ![Location picker](https://github.com/Shahzzoda/Trippin/blob/master/pictures/location.png)
 You can also add a description for each of your photo and your trip overall! Here's what the final peice would look together on the profile and map page when the post is clicked on!
-![Trip module. Displays the trip description, each photo, and their corresponding description](https://github.com/Shahzzoda/Trippin/blob/master/pictures/photometa.png)
+![Trip module. Displays the trip description, each photo, and their corresponding description](https://github.com/Shahzzoda/Trippin/blob/master/pictures/postmeta.png)
 
 Everytime you post a trip, confetti displays!
 
