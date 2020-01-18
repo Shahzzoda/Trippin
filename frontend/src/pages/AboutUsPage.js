@@ -19,22 +19,22 @@ function AboutUsPage() {
           <div class="col-lg-3">
             <img class="rounded-circle fit-image" src="https://cunytechprep.nyc/c5/Shahzoda%20Davlatova.JPG" alt="The Shah" width="140" height="140"/>
             <h2>Shahzoda Davlatova</h2>
-            <p>A student attending Brooklyn College, her enthusiasm for </p>
+            <p>Shahzoda is a computational math major at brooklyn college. She loves competing at hackathons, eating ramen, and skating.</p>
           </div>
           <div class="col-lg-3">
             <img class="rounded-circle fit-image" src="https://cunytechprep.nyc/c5/Jacky%20Lau.JPG" alt="The Destroyer" width="140" height="140"/>
             <h2>Jacky Lau</h2>
-            <p>A computer science student of Queens College, he tries his hardest to </p>
+            <p>Jacky is a student studying computer science at Queens College. He leads the club Asian Students in Action and focuses on activism in minority groups.</p>
           </div>
           <div class="col-lg-3">
             <img class="rounded-circle fit-image" src="https://cunytechprep.nyc/c5/Narvisha%20Sajjad.JPG" alt="The Navigator" width="140" height="140"/>
             <h2>Narvisha Sajjad</h2>
-            <p>A Hunter computer science student who is also apart of the Game Development Club, she designs </p>
+            <p>Narvisha is a junior at Hunter college, majoring in computer science. She enjoys art and reading.</p>
           </div>
           <div class="col-lg-3">
             <img class="rounded-circle fit-image" src="https://cunytechprep.nyc/c5/Noor%20Salim.JPG" alt="The Light" width="140" height="140"/>
             <h2>Noor Salim</h2>
-            <p>A current student of Queens College, he </p>
+            <p>Currently a student of Queens College studying Commputer Science and Mathematics; he aspires to be a software engineer. On the side, he enjoys reading, gaming, traveling, and eating at all the hidden spots of Queens.</p>
           </div>
         </div>
 
